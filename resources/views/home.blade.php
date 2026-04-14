@@ -1,20 +1,12 @@
 @extends('layout')
 
 @section('content')
+<div class="text-center mt-10">
+    <h2 class="text-4xl font-bold text-blue-700">Selamat Datang 🎉</h2>
+    <p class="mt-4 text-gray-600">Sistem Manajemen Event dan Ticketing</p>
 
-<h1>Selamat Datang di Sistem Manajemen Event & Ticketing</h1>
-
-<p>
-Website ini digunakan untuk membantu pengguna dalam mengelola dan memesan tiket event 
-seperti konser, seminar, workshop, dan berbagai acara lainnya dengan mudah dan cepat.
-</p>
-
-<h3>Fitur Utama:</h3>
-<ul>
-    <li>Melihat daftar event</li>
-    <li>Melakukan pemesanan tiket</li>
-    <li>Manajemen data event</li>
-    <li>Dashboard admin</li>
-</ul>
-
+    <button class="mt-6 bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600">
+        Pesan Tiket
+    </button>
+</div>
 @endsection

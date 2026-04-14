@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Website Event</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ $title ?? 'Event Ticketing' }}</title>
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
+<body class="bg-gray-100">
 
-    <h2>Website Event & Ticketing</h2>
+<nav class="bg-blue-600 text-white shadow-lg">
+    <div class="container mx-auto flex justify-between items-center p-4">
+        <h1 class="text-xl font-bold">🎟️ Event Ticketing</h1>
 
-    <nav>
-        <a href="/home">Home</a> |
-        <a href="/about">About</a> |
-        <a href="/product">Product</a> |
-        <a href="/contact">Contact</a> |
-        <a href="/login">Login</a> |
-        <a href="/register">Register</a> |
-        <a href="/dashboard">Dashboard</a>
-    </nav>
+        <div class="space-x-4">
+            <a href="/" class="hover:text-yellow-300">Home</a>
+            <a href="/about" class="hover:text-yellow-300">About</a>
+            <a href="/product" class="hover:text-yellow-300">Product</a>
+            <a href="/contact" class="hover:text-yellow-300">Contact</a>
+        </div>
+    </div>
+</nav>
 
-    <hr>
-
+<div class="container mx-auto p-6">
     @yield('content')
+</div>
 
 </body>
 </html>
