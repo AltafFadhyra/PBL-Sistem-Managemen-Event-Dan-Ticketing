@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AltafController;
 
-Route::view('/home', 'home');
-Route::view('/product', 'product');
-Route::view('/about', 'about');
-Route::view('/contact', 'contact');
-Route::view('/login', 'login');
-Route::view('/register', 'register');
-Route::view('/dashboard', 'dashboard');
+Route::get('/altaf', [AltafController::class, 'tampilkan']);
+
+use App\Http\Controllers\ProductController;
+
+// Route yang merujuk ke ProductController dengan method 'index'
+Route::get('/produk', [ProductController::class, 'index']);
