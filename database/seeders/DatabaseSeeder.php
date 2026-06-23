@@ -1,0 +1,31 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\User;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class DatabaseSeeder extends Seeder
+{
+    use WithoutModelEvents;
+
+    /**
+     * Seed the application's database.
+     */
+    public function run(): void
+    {
+        // User::factory(10)->create();
+
+        \App\Models\User::factory()->create([
+            'name' => 'Super Admin',
+            'email' => 'admin@event.com',
+            'password' => bcrypt('password'),
+            'role' => 'superadmin',
+        ]);
+
+        \App\Models\EventCategory::create(['name' => 'Seminar', 'slug' => 'seminar']);
+        \App\Models\EventCategory::create(['name' => 'Konser Musik', 'slug' => 'konser-musik']);
+        \App\Models\EventCategory::create(['name' => 'Workshop', 'slug' => 'workshop']);
+    }
+}
